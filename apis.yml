@@ -44,7 +44,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.signl4.com/integrations/webhook/webhook.html
-      - type: API Reference
+      - type: APIReference
         url: https://connect.signl4.com/webhook/docs/index.html
       - type: Code Samples
         url: https://github.com/signl4/code-snippets
@@ -76,7 +76,7 @@ common:
     url: https://docs.signl4.com
   - type: Pricing
     url: https://www.signl4.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://account.signl4.com/register
   - type: Support
     url: https://support.signl4.com
