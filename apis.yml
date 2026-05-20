@@ -70,6 +70,8 @@ apis:
       - type: Code Samples
         url: https://docs.signl4.com/samples/code-samples/code-samples.html
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/signl4
   - type: Website
     url: https://www.signl4.com
   - type: Documentation
