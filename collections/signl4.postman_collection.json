@@ -1,0 +1,445 @@
+{
+  "item": [
+    {
+      "id": "b8241062-53af-4884-bf0a-cf8d0a7cbb21",
+      "name": "Webhook",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9a0599ba-436f-4cfb-a2a4-1dff553dc302",
+          "name": "Trigger Inbound Webhook Alert",
+          "request": {
+            "name": "Trigger Inbound Webhook Alert",
+            "description": {
+              "content": "Trigger a SIGNL4 mobile alert by posting a payload containing Title and Message fields along with any optional X-S4 control parameters. Authentication is via the team or webhook secret embedded in the URL path. Supports application/json, application/x-www-form-urlencoded, and multipart/form-data content types.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhook",
+                ":teamSecret"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "teamSecret",
+                  "description": "(Required) Team or webhook secret that authorizes the alert."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "Title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Message",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c5e8c87a-0b83-477d-9ee9-b23c8aa43b93",
+              "name": "Alert accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    ":teamSecret"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "teamSecret",
+                      "description": "(Required) Team or webhook secret that authorizes the alert."
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "Title",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Message",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "55d83265-b9f0-4859-a34b-e29fdfbe7286",
+              "name": "Invalid payload",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    ":teamSecret"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "teamSecret",
+                      "description": "(Required) Team or webhook secret that authorizes the alert."
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "Title",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Message",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a15e7723-a6a5-42f5-a9e0-3faccf7ee232",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhook",
+                    ":teamSecret"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "teamSecret",
+                      "description": "(Required) Team or webhook secret that authorizes the alert."
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "Title",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "Message",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "56735d0b-0ced-4761-bf7f-ea761b851987",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3aea914e-c683-4949-9807-97c9c32405e3",
+          "name": "Create Event",
+          "request": {
+            "name": "Create Event",
+            "description": {
+              "content": "Raise an event in SIGNL4 that will be turned into a mobile alert. Authentication uses the X-S4-Api-Key header carrying the team or webhook secret.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "events",
+                ":webhookIdOrTeamId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "webhookIdOrTeamId",
+                  "description": "(Required) Webhook ID or team ID receiving the event."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-S4-Api-Key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ef374e01-99b3-4116-9af3-9702b0d7fcc2",
+              "name": "Event accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "events",
+                    ":webhookIdOrTeamId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "webhookIdOrTeamId",
+                      "description": "(Required) Webhook ID or team ID receiving the event."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-S4-Api-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "99085247-2397-444b-ac97-be8f6ff159ed",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "events",
+                    ":webhookIdOrTeamId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "webhookIdOrTeamId",
+                      "description": "(Required) Webhook ID or team ID receiving the event."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-S4-Api-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://connect.signl4.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ee080855-7f26-4047-a73b-bec6429706ef",
+    "name": "SIGNL4 Webhook and REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SIGNL4 mobile alerting platform endpoints. The inbound webhook accepts JSON, form-encoded, or multipart payloads with Title and Message fields plus optional X-S4 control parameters and triggers SIGNL4 mobile alerts. The REST API v2 lets clients raise events with an X-S4-Api-Key header. Authentication uses a unique team or webhook secret embedded in the URL path or supplied via the API key header.\n\nContact Support:\n Name: SIGNL4 Support",
+      "type": "text/plain"
+    }
+  }
+}
