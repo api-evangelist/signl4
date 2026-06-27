@@ -5,14 +5,17 @@
       "source": "https://www.signl4.com/feed/",
       "feed_url": "https://www.signl4.com/feed/",
       "title": "",
-      "saved": 3,
+      "saved": 2,
       "method": "feed"
     },
     {
       "source": "https://support.signl4.com",
-      "error": "HTTPError"
+      "feed_url": "https://support.signl4.com",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 5,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 8,
+  "fetched": "2026-06-27T12:03:07Z"
 }

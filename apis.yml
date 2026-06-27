@@ -78,7 +78,7 @@ common:
     url: https://docs.signl4.com
   - type: Pricing
     url: https://www.signl4.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://account.signl4.com/register
   - type: Support
     url: https://support.signl4.com
