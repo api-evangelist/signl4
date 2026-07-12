@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.signl4.com/
+url: https://trust.signl4.com/
+certifications:
+- ISO 27001
+- GDPR
+evidence:
+- source: https://trust.signl4.com/
+  keywords:
+  - iso/iec 27001
+  - trust center
+  - gdpr

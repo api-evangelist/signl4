@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/signl4-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: S4ApiKey
+  type: apiKey
+  in: header
+  parameter: X-S4-Api-Key
+  description: Team or webhook secret used to authorize REST API requests.
+  sources:
+  - openapi/signl4-openapi.yml
