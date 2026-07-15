@@ -70,6 +70,8 @@ apis:
       - type: Code Samples
         url: https://docs.signl4.com/samples/code-samples/code-samples.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/signl4-agentic-access.yml
   - type: TrustCenter
     url: security/signl4-trust-center.yml
   - type: DomainSecurity
