@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: SIGNL4 Webhook and REST Events API
+  description: SIGNL4 mobile alerting platform endpoints. The inbound webhook accepts JSON, form-encoded, or multipart payloads with Title and Message fields plus optional X-S4 control parameters and triggers SIGNL4 mobile alerts. The REST API v2 lets clients raise events with an X-S4-Api-Key header. Authentication uses a unique team or webhook secret embedded in the URL path or supplied via the API key header.
+  version: v2
+  contact:
+    name: SIGNL4 Support
+    url: https://support.signl4.com
+servers:
+- url: https://connect.signl4.com
+  description: SIGNL4 connect endpoint
+tags:
+- name: Events
+paths:
+  /api/v2/events/{webhookIdOrTeamId}:
+    post:
+      summary: Create Event
+      description: Raise an event in SIGNL4 that will be turned into a mobile alert. Authentication uses the X-S4-Api-Key header carrying the team or webhook secret.
+      operationId: createEvent
+      tags:
+      - Events
+      security:
+      - S4ApiKey: []
+      parameters:
+      - name: webhookIdOrTeamId
+        in: path
+        required: true
+        description: Webhook ID or team ID receiving the event.
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                Message:
+                  type: string
+                ExternalID:
+                  type: string
+                Status:
+                  type: string
+                  enum:
+                  - new
+                  - acknowledged
+                  - resolved
+      responses:
+        '200':
+          description: Event accepted
+        '401':
+          description: Unauthorized
+components:
+  securitySchemes:
+    S4ApiKey:
+      type: apiKey
+      in: header
+      name: X-S4-Api-Key
+      description: Team or webhook secret used to authorize REST API requests.
