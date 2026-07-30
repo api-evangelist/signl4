@@ -9,7 +9,19 @@ description: >-
   data. Authentication uses a team or webhook secret embedded in the URL
   path or supplied via the X-S4-Api-Key header.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/signl4.png
 tags:
   - Alerting
   - Incident Management
@@ -25,50 +37,67 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: signl4:inbound-webhook
-    name: SIGNL4 Inbound Webhook API
-    description: >-
-      Simple HTTPS webhook endpoint for triggering mobile alerts in SIGNL4
-      from any monitoring, ITSM, or IoT tool. Accepts JSON payloads with
-      Title and Message fields plus optional X-S4 control parameters for
-      service categorization, location, alerting scenario, and external
-      identifiers. Authentication uses a unique team or webhook secret
-      embedded in the URL path.
-    humanURL: https://docs.signl4.com/integrations/webhook/webhook.html
-    baseURL: https://connect.signl4.com/webhook
-    tags:
-      - Webhook
-      - Inbound
-      - Alerting
-      - Mobile Push
-    properties:
-      - type: Documentation
-        url: https://docs.signl4.com/integrations/webhook/webhook.html
-      - type: APIReference
-        url: https://connect.signl4.com/webhook/docs/index.html
-      - type: Code Samples
-        url: https://github.com/signl4/code-snippets
-  - aid: signl4:rest-api
-    name: SIGNL4 REST API
-    description: >-
-      RESTful API for programmatic alert lifecycle management including
-      creating events, acknowledging or closing alerts, annotating alerts,
-      and retrieving team data. Authentication is via X-S4-Api-Key header
-      with the team or webhook secret.
-    humanURL: https://docs.signl4.com/integrations/rest-api/rest-api.html
-    baseURL: https://connect.signl4.com/api
-    tags:
-      - REST
-      - Alert Management
-      - Events
-      - Incident Response
-    properties:
-      - type: Documentation
-        url: https://docs.signl4.com/integrations/rest-api/rest-api.html
-      - type: Overview
-        url: https://www.signl4.com/webhook-rest-smtp-api-integration/
-      - type: Code Samples
-        url: https://docs.signl4.com/samples/code-samples/code-samples.html
+- aid: signl4:inbound-webhook
+  name: SIGNL4 Inbound Webhook API
+  description: >-
+    Simple HTTPS webhook endpoint for triggering mobile alerts in SIGNL4 from any monitoring, ITSM, or
+    IoT tool. Accepts JSON payloads with Title and Message fields plus optional X-S4 control parameters
+    for service categorization, location, alerting scenario, and external identifiers. Authentication
+    uses a unique team or webhook secret embedded in the URL path.
+  humanURL: https://docs.signl4.com/integrations/webhook/webhook.html
+  baseURL: https://connect.signl4.com/webhook
+  tags:
+  - Webhook
+  - Inbound
+  - Alerting
+  - Mobile Push
+  properties:
+  - type: Documentation
+    url: https://docs.signl4.com/integrations/webhook/webhook.html
+  - type: APIReference
+    url: https://connect.signl4.com/webhook/docs/index.html
+  - type: Code Samples
+    url: https://github.com/signl4/code-snippets
+- aid: signl4:rest-api
+  name: SIGNL4 REST API
+  description: >-
+    RESTful API for programmatic alert lifecycle management including creating events, acknowledging or
+    closing alerts, annotating alerts, and retrieving team data. Authentication is via X-S4-Api-Key header
+    with the team or webhook secret.
+  humanURL: https://docs.signl4.com/integrations/rest-api/rest-api.html
+  baseURL: https://connect.signl4.com/api
+  tags:
+  - REST
+  - Alert Management
+  - Events
+  - Incident Response
+  properties:
+  - type: Documentation
+    url: https://docs.signl4.com/integrations/rest-api/rest-api.html
+  - type: Overview
+    url: https://www.signl4.com/webhook-rest-smtp-api-integration/
+  - type: Code Samples
+    url: https://docs.signl4.com/samples/code-samples/code-samples.html
+- aid: signl4:signl4-events-api
+  name: SIGNL4 Events API
+  description: The Events API from SIGNL4 — 1 operation(s) for events.
+  humanURL: https://docs.signl4.com/integrations/webhook/webhook.html
+  baseURL: https://connect.signl4.com/webhook
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/signl4-events-api-openapi.yml
+- aid: signl4:signl4-webhook-api
+  name: SIGNL4 Webhook API
+  description: The Webhook API from SIGNL4 — 1 operation(s) for webhook.
+  humanURL: https://docs.signl4.com/integrations/webhook/webhook.html
+  baseURL: https://connect.signl4.com/webhook
+  tags:
+  - Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/signl4-webhook-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/signl4-agentic-access.yml
