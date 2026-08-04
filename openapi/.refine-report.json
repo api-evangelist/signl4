@@ -1,0 +1,16 @@
+{
+  "provider": "signl4",
+  "sources": [
+    "signl4-events-api-openapi.yml",
+    "signl4-webhook-api-openapi.yml"
+  ],
+  "outputs": [
+    "signl4-events-api-openapi.yml",
+    "signl4-webhook-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
