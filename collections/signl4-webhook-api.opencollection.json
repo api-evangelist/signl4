@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SIGNL4 and REST Events Webhook API",
+    "version": "v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhook",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Trigger Inbound Webhook Alert",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://connect.signl4.com/webhook/:teamSecret",
+            "params": [
+              {
+                "name": "teamSecret",
+                "value": "",
+                "type": "path",
+                "description": "Team or webhook secret that authorizes the alert."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Trigger a SIGNL4 mobile alert by posting a payload containing Title and Message fields along with any optional X-S4 control parameters. Authentication is via the team or webhook secret embedded in the URL path. Supports application/json, application/x-www-form-urlencoded, and multipart/form-data content types."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SIGNL4 Webhook and REST Events API",
+    "version": "v2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://connect.signl4.com/api/v2/events/:webhookIdOrTeamId",
+            "params": [
+              {
+                "name": "webhookIdOrTeamId",
+                "value": "",
+                "type": "path",
+                "description": "Webhook ID or team ID receiving the event."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-S4-Api-Key",
+              "value": "{{X-S4-Api-Key}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Raise an event in SIGNL4 that will be turned into a mobile alert. Authentication uses the X-S4-Api-Key header carrying the team or webhook secret."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

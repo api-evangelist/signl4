@@ -1,0 +1,219 @@
+{
+  "item": [
+    {
+      "id": "27330f36-d9d4-4cad-8d52-71524b1634f5",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09b8d0bd-61c0-4e66-af56-57b9a6098852",
+          "name": "Create Event",
+          "request": {
+            "name": "Create Event",
+            "description": {
+              "content": "Raise an event in SIGNL4 that will be turned into a mobile alert. Authentication uses the X-S4-Api-Key header carrying the team or webhook secret.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "events",
+                ":webhookIdOrTeamId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "webhookIdOrTeamId",
+                  "description": "(Required) Webhook ID or team ID receiving the event."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-S4-Api-Key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "57708d56-60b2-40d2-9354-18ec970ee15c",
+              "name": "Event accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "events",
+                    ":webhookIdOrTeamId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "webhookIdOrTeamId",
+                      "description": "(Required) Webhook ID or team ID receiving the event."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-S4-Api-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ba31d2a-21fa-4142-8928-e38963443022",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "events",
+                    ":webhookIdOrTeamId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "webhookIdOrTeamId",
+                      "description": "(Required) Webhook ID or team ID receiving the event."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-S4-Api-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Title\": \"<string>\",\n  \"Message\": \"<string>\",\n  \"ExternalID\": \"<string>\",\n  \"Status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://connect.signl4.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8e9959a7-9346-458d-ab0c-6e75e348c431",
+    "name": "SIGNL4 Webhook and REST Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SIGNL4 mobile alerting platform endpoints. The inbound webhook accepts JSON, form-encoded, or multipart payloads with Title and Message fields plus optional X-S4 control parameters and triggers SIGNL4 mobile alerts. The REST API v2 lets clients raise events with an X-S4-Api-Key header. Authentication uses a unique team or webhook secret embedded in the URL path or supplied via the API key header.\n\nContact Support:\n Name: SIGNL4 Support",
+      "type": "text/plain"
+    }
+  }
+}
