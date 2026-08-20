@@ -27,6 +27,15 @@ tags:
   - Incident Management
   - On-Call
   - Mobile Alerts
+  - Notification
+  - DevOps
+  - IT Operations
+  - Monitoring
+tags_raw:
+  - Alerting
+  - Incident Management
+  - On-Call
+  - Mobile Alerts
   - Notifications
   - DevOps
   - IT Operations
@@ -69,6 +78,11 @@ apis:
   tags:
   - REST
   - Alert Management
+  - Event
+  - Incident Response
+  tags_raw:
+  - REST
+  - Alert Management
   - Events
   - Incident Response
   properties:
@@ -84,6 +98,8 @@ apis:
   humanURL: https://docs.signl4.com/integrations/webhook/webhook.html
   baseURL: https://connect.signl4.com/webhook
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
