@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: SIGNL4 Webhook and REST Events API
   description: SIGNL4 mobile alerting platform endpoints. The inbound webhook accepts JSON, form-encoded, or multipart payloads with Title and Message fields plus optional X-S4 control parameters and triggers SIGNL4 mobile alerts. The REST API v2 lets clients raise events with an X-S4-Api-Key header. Authentication uses a unique team or webhook secret embedded in the URL path or supplied via the API key header.

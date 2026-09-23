@@ -1,8 +1,7 @@
 {
   "provider": "signl4",
   "sources": [
-    "signl4-events-api-openapi.yml",
-    "signl4-webhook-api-openapi.yml"
+    "_original/signl4-openapi.yml"
   ],
   "outputs": [
     "signl4-events-api-openapi.yml",
@@ -11,6 +10,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "signl4-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "signl4-openapi.yml: declared missing tag: Events",
+    "signl4-openapi.yml: declared missing tag: Webhook",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "signl4-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "signl4-webhook-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

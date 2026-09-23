@@ -1,0 +1,27 @@
+# Front Door AI Index — signl4 — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: signl4
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.signl4.com
+  final_host: www.signl4.com
+  ownership: own
+  owner: signl4
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 9
+  host_score: 9
+  density: 5.32
+  words: 1692
+  tiers:
+    agentic: 0
+    core: 9
+    model: 0
+  ambiguous: 2
+  top_terms:
+    AI: 9
+    automation: 1
+    smart: 1
