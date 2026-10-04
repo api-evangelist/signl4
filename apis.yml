@@ -128,6 +128,9 @@ apis:
   - type: OpenAPI
     url: openapi/signl4-webhook-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/signl4-capability-edges.yml
+    name: SIGNL4 Business Capability Map
   - type: AgenticAccess
     url: agentic-access/signl4-agentic-access.yml
   - type: TrustCenter
