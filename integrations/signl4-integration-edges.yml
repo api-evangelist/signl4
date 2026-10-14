@@ -3,11 +3,11 @@ edges:
 - partner_name: Twilio Segment
   partner: segment
   partner_match: aggregator
-  marketplace: coverage
+  marketplace: segment-partner-destinations
   channel: partner-built
-  direction: partner-built
-  type: coverage
-  relationship: connector-coverage
+  direction: third-party
+  type: marketplace
+  relationship: platform-app
   evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/signl4-alerting
   coverage_role:
   - destination
@@ -29,7 +29,83 @@ edges:
       - Track
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Datadog (own)
+  partner: datadog
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/DataDog/integrations-extras/tree/master/signl4
+  mirror_of: datadog/integrations/datadog-integration-edges.yml
+  apps:
+  - SIGNL4
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Alerting
+- partner_name: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_match: mirror
+  mirror_match: domain+verified
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SIGNL4
+  mirror_of: microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+  apps:
+  - SIGNL4
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: DevOps
+  badges:
+  - support-tier:partner
+- partner_name: New Relic (own)
+  partner: new-relic
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://newrelic.com/instant-observability/signl4
+  mirror_of: new-relic/integrations/new-relic-integration-edges.yml
+  apps:
+  - SIGNL4
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Community
+- partner_name: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/SIGNL4/
+  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+  apps:
+  - SIGNL4
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Messaging and Conferencing
+  badges:
+  - support:partner
 method: searched
 checked:
+- datadog/integrations/datadog-integration-edges.yml
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/signl4-alerting
+- microsoft-sentinel/integrations/microsoft-sentinel-integration-edges.yml
+- new-relic/integrations/new-relic-integration-edges.yml
+- palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/signl4-alerting
