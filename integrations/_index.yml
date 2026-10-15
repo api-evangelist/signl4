@@ -90,7 +90,7 @@
     app_slug: signl4
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: signl4-n8n
   label: n8n
@@ -115,5 +115,5 @@
     node_path: Signl4
     trigger: false
     builder: n8n (built-in node)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
