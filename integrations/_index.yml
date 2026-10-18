@@ -117,3 +117,29 @@
     builder: n8n (built-in node)
   status: not-a-workflow
   arazzo: null
+- slug: signl4-microsoft-teams-own
+  label: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_name: Microsoft Teams (own)
+  category: Microsoft Teams app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA200001239
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: signl4-slack-own
+  label: Slack (own)
+  partner: slack
+  partner_name: Slack (own)
+  category: Slack app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://slack.com/marketplace/ATPFNHQJC-signl4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
