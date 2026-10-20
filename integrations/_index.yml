@@ -15,56 +15,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: signl4-datadog-own
-  label: Datadog (own)
-  partner: datadog
-  partner_name: Datadog (own)
-  category: Alerting
+- slug: signl4-microsoft-azure-marketplace
+  label: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_name: Microsoft Azure Marketplace
   type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://github.com/DataDog/integrations-extras/tree/master/signl4
+  marketplace: azure-marketplace
+  channel: distribution
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Derdack
   source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: signl4-microsoft-sentinel-own
-  label: Microsoft Sentinel (own)
-  partner: microsoft-sentinel
-  partner_name: Microsoft Sentinel (own)
-  category: DevOps
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SIGNL4
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: signl4-new-relic-own
-  label: New Relic (own)
-  partner: new-relic
-  partner_name: New Relic (own)
-  category: Community
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://newrelic.com/instant-observability/signl4
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: signl4-palo-alto-networks-own
-  label: Palo Alto Networks (own)
-  partner: palo-alto-networks
-  partner_name: Palo Alto Networks (own)
-  category: Messaging and Conferencing
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://cortex.marketplace.pan.dev/marketplace/details/SIGNL4/
-  source: edge
-  relationship: platform-app
+  relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
 - slug: signl4-zapier
@@ -99,7 +59,7 @@
   type: marketplace
   marketplace: n8n-nodes-base
   channel: open-source-node
-  evidence: https://github.com/n8n-io/n8n/tree/860f1273ebd73fabbd668cbec2c49ed9b48a286d/packages/nodes-base/nodes/Signl4
+  evidence: https://github.com/n8n-io/n8n/tree/f73dc337f8dc61a4fd44aebe41c55faafe4f53a4/packages/nodes-base/nodes/Signl4
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -117,6 +77,32 @@
     builder: n8n (built-in node)
   status: not-a-workflow
   arazzo: null
+- slug: signl4-datadog-own
+  label: Datadog (own)
+  partner: datadog
+  partner_name: Datadog (own)
+  category: Alerting
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/DataDog/integrations-extras/tree/master/signl4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: signl4-microsoft-sentinel-own
+  label: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_name: Microsoft Sentinel (own)
+  category: DevOps
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SIGNL4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: signl4-microsoft-teams-own
   label: Microsoft Teams (own)
   partner: microsoft-teams
@@ -130,6 +116,32 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: signl4-new-relic-own
+  label: New Relic (own)
+  partner: new-relic
+  partner_name: New Relic (own)
+  category: Community
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://newrelic.com/instant-observability/signl4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: signl4-palo-alto-networks-own
+  label: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_name: Palo Alto Networks (own)
+  category: Messaging and Conferencing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/SIGNL4/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: signl4-slack-own
   label: Slack (own)
   partner: slack
@@ -139,6 +151,19 @@
   marketplace: own
   channel: partner-built
   evidence: https://slack.com/marketplace/ATPFNHQJC-signl4
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: signl4-zendesk-own
+  label: Zendesk (own)
+  partner: zendesk
+  partner_name: Zendesk (own)
+  category: Security, Risk and Compliance
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.zendesk.com/marketplace/apps/support/663402/signl4/
   source: edge
   relationship: platform-app
   status: not-a-workflow
