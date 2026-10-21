@@ -219,6 +219,23 @@ edges:
   detected: '2026-10-20'
   detected_by: mirror-platform-listings.py
   category: Security, Risk and Compliance
+- partner_name: Atlassian (own)
+  partner: atlassian
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.atlassian.com/vendors/1225017/derdack-gmbh
+  mirror_of: atlassian/integrations/atlassian-integration-edges.yml
+  apps:
+  - SIGNL4 – Mobile Alerting
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: Messaging
 method: searched
 checked:
 - datadog/integrations/datadog-integration-edges.yml
@@ -233,5 +250,6 @@ checked:
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
 - zendesk/integrations/zendesk-integration-edges.yml
+- atlassian/integrations/atlassian-integration-edges.yml
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/signl4-alerting
 marketplace_apps: []
